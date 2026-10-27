@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="JobLink Ghana helps people discover jobs, internships and apprenticeships across Ghana.">
+<title>JobLink Ghana | Find your next opportunity</title>
+<style>
+:root{--green:#123d35;--gold:#f2c14e;--paper:#f5f7f3;--ink:#182622;--muted:#66736c}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--paper);color:var(--ink)}
+.container{width:min(1080px,calc(100% - 32px));margin:auto}header,footer{background:var(--green);color:white}
+nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{font-weight:800;font-size:1.25rem;text-decoration:none;color:white}.brand span{color:var(--gold)}
+nav a:not(.brand){color:white;text-decoration:none;font-weight:700}
+.hero{background:var(--green);color:white;padding:56px 0 76px}.hero h1{font-size:clamp(2.2rem,5vw,4rem);line-height:1.05;letter-spacing:-.04em;max-width:720px;margin:12px 0 18px}.hero h1 span{color:var(--gold)}
+.hero p{max-width:620px;color:#dbe8df;line-height:1.7;font-size:1.05rem}
+.pill{display:inline-block;background:#ffffff1c;color:var(--gold);border-radius:99px;padding:8px 12px;font-size:.8rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em}
+.button{display:inline-block;border:0;border-radius:10px;background:var(--gold);color:#1b2b27;padding:12px 16px;font-weight:800;cursor:pointer;text-decoration:none}
+.search{margin-top:-30px;background:white;padding:18px;border:1px solid #dce5de;border-radius:16px;box-shadow:0 12px 32px #102d2414;display:grid;grid-template-columns:2fr 1fr 1fr auto;gap:12px}
+label{display:block;font-size:.78rem;font-weight:800;color:var(--muted);margin-bottom:7px}
+input,select{width:100%;min-width:0;padding:12px;border:1px solid #dce5de;border-radius:9px;background:white;color:var(--ink)}
+main{padding-bottom:56px}section.content{padding-top:44px}h2{font-size:clamp(1.6rem,3vw,2.2rem);margin:0 0 8px;letter-spacing:-.03em}
+.muted{color:var(--muted);line-height:1.6}.jobs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:20px}
+.job,.feature{background:white;border:1px solid #dce5de;border-radius:14px;padding:20px}.job h3{margin:0 0 6px;font-size:1.1rem}.company{color:var(--muted);margin-bottom:14px}
+.tag{display:inline-block;border-radius:99px;padding:6px 9px;background:#fff3d2;font-size:.78rem;font-weight:800;margin-bottom:12px}
+.job .details{color:var(--muted);font-size:.9rem;margin:0 0 16px}.notice{margin-top:14px;font-size:.86rem;line-height:1.6;color:#5e665f}
+.empty{grid-column:1/-1;padding:26px;text-align:center;background:white;border:1px dashed #cbd6ce;border-radius:12px}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}.feature h3{margin:8px 0}
+footer{padding:26px 0}footer p{margin:7px 0 0;color:#dbe8df;font-size:.9rem}
+@media(max-width:760px){.search{grid-template-columns:1fr 1fr}.search .wide{grid-column:1/-1}.jobs{grid-template-columns:1fr}.features{grid-template-columns:1fr}}
+@media(max-width:480px){nav{min-height:62px}nav a:not(.brand){font-size:.9rem}.hero{padding:42px 0 62px}.search{grid-template-columns:1fr}.search .wide{grid-column:auto}}
+</style>
+</head>
+<body>
+<header><nav class="container"><a class="brand" href="#">JobLink <span>Ghana</span></a><a href="#jobs">Find jobs ↓</a></nav></header>
+<div class="hero"><div class="container"><span class="pill">Your next chapter starts here</span><h1>Find work that moves <span>you forward.</span></h1><p>Explore job opportunities, internships and apprenticeships from across Ghana. Our goal is to make the search clearer, easier and safer.</p><a class="button" href="#jobs">Explore opportunities →</a></div></div>
+<main class="container">
+<form class="search" id="search-form">
+<div class="wide"><label for="keyword">JOB TITLE OR KEYWORD</label><input id="keyword" type="search" placeholder="e.g. designer, sales, internship"></div>
+<div><label for="location">LOCATION</label><select id="location"><option value="">All Ghana</option><option>Accra</option><option>Kumasi</option><option>Takoradi</option><option>Tamale</option><option>Remote</option></select></div>
+<div><label for="type">JOB TYPE</label><select id="type"><option value="">All types</option><option>Full-time</option><option>Part-time</option><option>Internship</option><option>Apprenticeship</option></select></div>
+<button class="button" type="submit">Search jobs</button>
+</form>
+<section class="content" id="jobs"><h2>Explore opportunities</h2><p class="muted" id="summary">These example cards show how job listings will look.</p><div class="jobs" id="job-list"></div><p class="notice"><strong>Important:</strong> These are fictional demo listings, not real vacancies. We must replace them with verified opportunities before sharing the site publicly.</p></section>
+<section class="content"><h2>Built to support your career journey</h2><p class="muted">JobLink Ghana aims to help students, graduates and other job seekers discover opportunities.</p><div class="features">
+<article class="feature"><div>📄</div><h3>CV tips</h3><p class="muted">Learn how to present your skills and experience clearly.</p></article>
+<article class="feature"><div>🎓</div><h3>Early-career roles</h3><p class="muted">Find internships, apprenticeships and entry-level opportunities.</p></article>
+<article class="feature"><div>🔐</div><h3>Safer job searching</h3><p class="muted">Be cautious of anyone asking you to pay money to secure a job.</p></article>
+</div></section>
+</main>
+<footer><div class="container"><strong>JobLink Ghana</strong><p>Connecting people to opportunities.</p></div></footer>
+<script>
+const jobs=[
+{title:"Junior Graphic Designer",company:"Example Creative Studio",location:"Accra",type:"Full-time",description:"Example role showing how a design vacancy could appear."},
+{title:"Business Support Intern",company:"Example Business Services",location:"Kumasi",type:"Internship",description:"Example internship card for students and recent graduates."},
+{title:"Electrical Technician Apprentice",company:"Example Skills Centre",location:"Takoradi",type:"Apprenticeship",description:"Example apprenticeship card for someone learning a practical trade."},
+{title:"Customer Support Assistant",company:"Example Support Company",location:"Tamale",type:"Full-time",description:"Example entry-level customer support role."},
+{title:"Content Writing Intern",company:"Example Media Team",location:"Remote",type:"Internship",description:"Example remote internship card."},
+{title:"Office Administration Assistant",company:"Example Office Group",location:"Accra",type:"Part-time",description:"Example part-time administration role."}
+];
+const list=document.getElementById("job-list"),keyword=document.getElementById("keyword"),locationSelect=document.getElementById("location"),typeSelect=document.getElementById("type"),summary=document.getElementById("summary");
+function renderJobs(){
+ const term=keyword.value.trim().toLowerCase(),location=locationSelect.value,type=typeSelect.value;
+ const matches=jobs.filter(job=>(!term||(job.title+" "+job.company+" "+job.description).toLowerCase().includes(term))&&(!location||job.location===location)&&(!type||job.type===type));
+ summary.textContent=matches.length+(matches.length===1?" example listing shown.":" example listings shown.");
+ if(!matches.length){list.innerHTML='<div class="empty">No matching example jobs. Try changing your search.</div>';return;}
+ list.innerHTML=matches.map(job=>`<article class="job"><span class="tag">${job.type}</span><h3>${job.title}</h3><div class="company">${job.company}</div><p class="details">📍 ${job.location}<br>${job.description}</p><p class="notice">Demo listing — not a real vacancy.</p></article>`).join("");
+}
+document.getElementById("search-form").addEventListener("submit",event=>{event.preventDefault();renderJobs();document.getElementById("jobs").scrollIntoView({behavior:"smooth"});});
+renderJobs();
+</script>
+</body>
+</html>
